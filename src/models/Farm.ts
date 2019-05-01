@@ -69,23 +69,10 @@ class Farm extends Drawable {
       let cow = new Cow(this)
       cow.p5 = this.p5
       cow.preload()
-      cow.setRandomPositionInField(
-        firstFieldX,
-        firstFieldY,
-        firstFieldW,
-        firstFieldH
-      )
+      cow.setRandomPositionInField(25, 25, 350, 175)
       this.cows.objects.push(cow)
     }
-    this.fields.push(
-      new Field(
-        firstFieldX,
-        firstFieldY,
-        firstFieldW,
-        firstFieldH,
-        this.cows.objects
-      )
-    )
+    this.fields.push(new Field(25, 25, 350, 175, this.cows.objects))
     
     //put sheep into farm
     for (let i = 0; i < this.sheep.total; i++) {
