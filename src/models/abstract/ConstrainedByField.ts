@@ -45,7 +45,7 @@ abstract class ConstrainedByField extends Drawable {
     }
 
     // right
-    if (this.x + this.width / 2 >= this.fieldW) {
+    if (this.x + this.width / 2 >= this.fieldW + this.fieldX ) {
       this.velocityX = -this.velocityX * this.bounceSpeed
       this.x = this.fieldW - this.width / 2 - 1
     }

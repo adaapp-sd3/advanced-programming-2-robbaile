@@ -1,0 +1,49 @@
+.FarmerDashboard {
+    color: #666;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    width: 90%;
+    margin: 10px auto;
+}
+
+.dashboard-heading {
+    text-align: left;
+    padding: 20px;
+    margin: 0;
+}
+
+.item-heading {
+    font-weight: bold;
+}
+
+.item-value {
+    display: inline;
+}
+
+.table-divider {
+    background-color: #ecf0f1;
+    height: 1px;
+    width: 50%;
+    margin: 5px auto;
+}
+
+.hide-button {
+    background-color: #ffffff;
+    border: 2px solid #545454;
+    font-size: 18px;
+    margin: 20px;
+    transition: 0.3s;
+}
+
+.hide-button:hover {
+    color: #666;
+    border-color: #666;
+    cursor: pointer;
+}
+
+
+.showUI_false {
+    display: none;
+}
+
+
+

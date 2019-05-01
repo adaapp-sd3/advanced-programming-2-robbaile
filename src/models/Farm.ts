@@ -1,6 +1,8 @@
-import Drawable from "./abstract/Drawable"
-import Field from "./Field"
-import Cow from "./animals/Cow"
+import Drawable from "./abstract/Drawable";
+import Field from "./Field";
+import Cow from "./animals/Cow";
+import Sheep from './animals/Sheep';
+import Chicken from './animals/Chicken';
 class Farm extends Drawable {
   fields: Field[] = []
   width: number = 700
@@ -62,6 +64,7 @@ class Farm extends Drawable {
     let firstFieldW = 350
     let firstFieldH = 175
 
+    // put cows into farm
     for (let i = 0; i < this.cows.total; i++) {
       let cow = new Cow(this)
       cow.p5 = this.p5
@@ -83,9 +86,29 @@ class Farm extends Drawable {
         this.cows.objects
       )
     )
-    this.fields.push(new Field(25, 275, 350, 125))
-    this.fields.push(new Field(475, 25, 200, 325))
-    this.fields.push(new Field(25, 450, 300, 125))
+    
+    //put sheep into farm
+    for (let i = 0; i < this.sheep.total; i++) {
+      let sheep = new Sheep(this)
+      sheep.p5 = this.p5
+      sheep.preload()
+      sheep.setRandomPositionInField(25, 275, 350, 125)
+      this.sheep.objects.push(sheep)
+    }
+    this.fields.push(new Field(25, 275, 350, 125, this.sheep.objects))
+
+    //put chickens into farm
+    for (let i = 0; i < this.chickens.total; i++) {
+      let chicken = new Chicken(this)
+      chicken.p5 = this.p5
+      chicken.preload()
+      chicken.setRandomPositionInField(25, 450, 300, 125)
+      this.chickens.objects.push(chicken)
+    }
+    this.fields.push(new Field(25, 450, 300, 125, this.chickens.objects))
+
+
+    this.fields.push(new Field(420, 25, 250, 325, this.cows.objects))
     for (let field of this.fields) {
       field.p5 = this.p5
       field.setHandleUpdate = this.updateUI

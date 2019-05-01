@@ -1,0 +1,12 @@
+.MarketDashboard {
+    color: #666;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    width: 90%;
+    margin: 10px auto;
+}
+
+.dashboard-subheading {
+    text-align: left;
+    padding: 0 20px;
+    margin: 0;
+}
