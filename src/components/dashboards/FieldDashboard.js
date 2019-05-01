@@ -8,6 +8,18 @@ class FieldDashboard extends Component {
     }
   }
 
+  shearSheep = () => {
+    for (var i=0; i<this.props.field.contents.length; i++) {
+      this.props.field.contents[i].yieldWool()
+    }
+  }
+
+  collectEggs = () => {
+    for (var i=0; i<this.props.field.contents.length; i++) {
+      this.props.field.contents[i].yieldEggs()
+    }
+  }
+
   render() {
     return (
       <div className="FieldDashboard">
@@ -18,6 +30,12 @@ class FieldDashboard extends Component {
             {this.props.field.contents[0].name}s
             {this.props.field.contents[0].name === "Cow" && (
               <button onClick={this.milkCows}>Milk them</button>
+            )}
+            {this.props.field.contents[0].name === "Sheep" && (
+              <button onClick={this.shearSheep}>Shear them</button>
+            )}
+            {this.props.field.contents[0].name === "Chicken" && (
+              <button onClick={this.collectEggs}>Collect eggs</button>
             )}
           </p>
           

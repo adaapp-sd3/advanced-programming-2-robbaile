@@ -12,6 +12,8 @@ class Farm extends Drawable {
   chickens: any
   straw: any
   milk: any
+  wool: any
+  eggs: any
   seeds: any
   constructor(
     cows: any = {
@@ -39,6 +41,16 @@ class Farm extends Drawable {
       total: 0,
       unit: "pints"
     },
+    wool: any = {
+      name: "Wool",
+      total: 0,
+      unit: "kilos"
+    },
+    eggs: any = {
+      name: "Eggs",
+      total: 0,
+      unit: "eggs"
+    },
     seeds: any = {
       name: "Grass seeds",
       total: 0,
@@ -51,6 +63,8 @@ class Farm extends Drawable {
     this.chickens = chickens
     this.straw = straw
     this.milk = milk
+    this.wool = wool
+    this.eggs = eggs
     this.seeds = seeds
   }
 
@@ -59,11 +73,6 @@ class Farm extends Drawable {
   }
 
   private createBasicFarm = () => {
-    let firstFieldX = 25
-    let firstFieldY = 25
-    let firstFieldW = 350
-    let firstFieldH = 175
-
     // put cows into farm
     for (let i = 0; i < this.cows.total; i++) {
       let cow = new Cow(this)
@@ -95,7 +104,7 @@ class Farm extends Drawable {
     this.fields.push(new Field(25, 450, 300, 125, this.chickens.objects))
 
 
-    this.fields.push(new Field(420, 25, 250, 325, this.cows.objects))
+    this.fields.push(new Field(420, 25, 250, 325))
     for (let field of this.fields) {
       field.p5 = this.p5
       field.setHandleUpdate = this.updateUI

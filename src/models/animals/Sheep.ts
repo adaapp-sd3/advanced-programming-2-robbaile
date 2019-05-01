@@ -16,7 +16,7 @@ class Sheep extends Animal {
   // if sheep is hungry, yield less milk
   yieldWool() {
     let amountOfWoolToYield = 5 - this.hunger
-    this.farm.milk.total += Math.abs(amountOfWoolToYield)
+    this.farm.wool.total += Math.abs(amountOfWoolToYield)
     this.hunger = 5
   }
 

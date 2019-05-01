@@ -16,7 +16,7 @@ class Chicken extends Animal {
   // if cow is hungry, yield less milk
   yieldEggs() {
     let amountOfEggsToYield = 5 - this.hunger
-    this.farm.milk.total += Math.abs(amountOfEggsToYield)
+    this.farm.eggs.total += Math.abs(amountOfEggsToYield)
     this.hunger = 5
   }
 

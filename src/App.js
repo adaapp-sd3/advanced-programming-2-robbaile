@@ -36,12 +36,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
+        {/* <header className="App-header">
           <h2>
             <img src="/img/farmer.png" className="App-logo" alt="logo" />{" "}
             Dashboard
           </h2>
-        </header>
+        </header> */}
         <FarmManager farmer={this.state.farmer} farm={this.state.farm} market={this.state.market} />
       </div>
     )
