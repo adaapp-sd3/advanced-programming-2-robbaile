@@ -14,7 +14,7 @@ code {
 }
 
 body {
-  overflow-y: hidden;
+  overflow-y: scroll;
 }
 
 canvas {

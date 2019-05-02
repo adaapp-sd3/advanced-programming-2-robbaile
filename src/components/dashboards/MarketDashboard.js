@@ -18,6 +18,29 @@ class MarketDashboard extends Component {
       this.props.market.currentFarmer.myFarm.milk.total -= 10;
       this.props.market.currentFarmer.budget += 10
     }
+    if (item === "eggs" && this.props.market.currentFarmer.myFarm.eggs.total > 10) {
+      this.props.market.currentFarmer.myFarm.eggs.total -= 10;
+      this.props.market.currentFarmer.budget += 10
+    }
+    if (item === "wool" && this.props.market.currentFarmer.myFarm.wool.total > 10) {
+      this.props.market.currentFarmer.myFarm.wool.total -= 10;
+      this.props.market.currentFarmer.budget += 10
+    }
+    if (item === "cow" && this.props.market.currentFarmer.myFarm.cows.total > 1) {
+      this.props.market.currentFarmer.budget += 150
+      this.props.market.currentFarmer.myFarm.cows.total -= 1;
+      this.props.market.currentFarmer.myFarm.cows.objects.pop();
+    }
+    if (item === "chicken" && this.props.market.currentFarmer.myFarm.chickens.total > 1) {
+      this.props.market.currentFarmer.budget += 100
+      this.props.market.currentFarmer.myFarm.chickens.total -= 1;
+      this.props.market.currentFarmer.myFarm.chickens.objects.pop();
+    }
+    if (item === "sheep" && this.props.market.currentFarmer.myFarm.sheep.total > 1) {
+      this.props.market.currentFarmer.budget += 100
+      this.props.market.currentFarmer.myFarm.sheep.total -= 1;
+      this.props.market.currentFarmer.myFarm.sheep.objects.pop();
+    }
   }
 
   render() {
@@ -44,8 +67,20 @@ class MarketDashboard extends Component {
           <dt>Milk</dt>
           <button onClick={() => this.sellItem("milk")}>Sell milk</button>
           <dd>{this.props.market.milkPrice} per pint</dd>
-          <dt>Beef</dt>
-          <dd>{this.props.market.beefPrice} per unit</dd>
+          <button onClick={() => this.sellItem("cow")}>Sell cow</button>
+          <dd>{this.props.market.milkPrice} per cow</dd>
+          {/* <dt>Beef</dt>
+          <dd>{this.props.market.beefPrice} per unit</dd> */}
+          <dt>Wool</dt>
+          <button onClick={() => this.sellItem("wool")}>Sell wool</button>
+          <dt>Sheep</dt>
+          <button onClick={() => this.sellItem("sheep")}>Sell sheep</button>
+          <dd>{this.props.market.milkPrice} per sheep</dd>
+          <dt>Chickens</dt>
+          <button onClick={() => this.sellItem("chicken")}>Sell chicken</button>
+          <dd>{this.props.market.milkPrice} per chicken</dd>
+          <dt>Eggs</dt>
+          <button onClick={() => this.sellItem("eggs")}>Sell eggs</button>
         </dl>
       </div>
     )
