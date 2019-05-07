@@ -78,19 +78,16 @@ class MarketDashboard extends Component {
         <h2 className="dashboard-heading">Market</h2>
         <p className="dashboard-subheading">Welcome to the market! See our prices below:</p>
         <div className="tab-labels">
-          <button className="tab-label" onClick={() => this.showBuyTab()}>Buy</button>
-          <button className="tab-label" onClick={() => this.showSellTab()}>Sell</button>
+          <button className={`tab-label buy-label__${this.state.showTab}`} onClick={() => this.showBuyTab()}>Buy</button>
+          <button className={`tab-label sell-label__${this.state.showTab}`} onClick={() => this.showSellTab()}>Sell</button>
         </div>
         {this.state.showTab ? (
           <div className="buy-tab">
-          <h3>Buy</h3>
+          <h3 className="buy-tab__heading">Buy</h3>
           <div className="buy-items">
             <div className="buy-item">
               <dt>Seeds</dt>
-              
-                <button className="buy-button" onClick={() => this.buyItem("seeds")}>
-                  Buy seeds
-                </button>
+              <button className="buy-button" onClick={() => this.buyItem("seeds")}>Buy seeds</button>
             </div>
             <div className="buy-item">
               <dt>Cows</dt> 
@@ -108,33 +105,33 @@ class MarketDashboard extends Component {
         </div>
         ) : (
           <div className="sell-tab">
-          <h3>Sell</h3>
-          <div className="sell-items">
-            <div className="sell-item">
-              <dt>Milk</dt>
-              <button className="sell-button" onClick={() => this.sellItem("milk")}>Sell milk</button>
+            <h3 className="sell-tab__heading">Sell</h3>
+            <div className="sell-items">
+              <div className="sell-item">
+                <dt>Milk</dt>
+                <button className="sell-button" onClick={() => this.sellItem("milk")}>Sell milk</button>
+              </div>
+              <div className="sell-item">
+                <dt>Cow</dt>
+                <button className="sell-button" onClick={() => this.sellItem("cow")}>Sell cow</button>
+              </div>
+              <div className="sell-item">
+                <dt>Wool</dt>
+                <button className="sell-button" onClick={() => this.sellItem("wool")}>Sell wool</button>
+              </div>
+              <div className="sell-item">
+                <dt>Sheep</dt>
+                <button className="sell-button" onClick={() => this.sellItem("sheep")}>Sell sheep</button>
+              </div>
+              <div className="sell-item">
+                <dt>Chickens</dt>
+                <button className="sell-button" onClick={() => this.sellItem("chicken")}>Sell chicken</button>
+              </div>
+              <div className="sell-item">
+                <dt>Eggs</dt>
+                <button className="sell-button" onClick={() => this.sellItem("eggs")}>Sell eggs</button>
+              </div>                                                   
             </div>
-            <div className="sell-item">
-              <dt>Cow</dt>
-              <button className="sell-button" onClick={() => this.sellItem("cow")}>Sell cow</button>
-            </div>
-            <div className="sell-item">
-              <dt>Wool</dt>
-              <button className="sell-button" onClick={() => this.sellItem("wool")}>Sell wool</button>
-            </div>
-            <div className="sell-item">
-              <dt>Sheep</dt>
-              <button className="sell-button" onClick={() => this.sellItem("sheep")}>Sell sheep</button>
-            </div>
-            <div className="sell-item">
-              <dt>Chickens</dt>
-              <button className="sell-button" onClick={() => this.sellItem("chicken")}>Sell chicken</button>
-            </div>
-            <div className="sell-item">
-              <dt>Eggs</dt>
-              <button className="sell-button" onClick={() => this.sellItem("eggs")}>Sell eggs</button>
-            </div>                                                   
-          </div>
         </div>
         )}
       </div>
