@@ -15,3 +15,6 @@ Hour 4
 Hour 5 and Hour 6 
 - Updated so that users can buy animals and they will be added to the fields that they currently have. 
 - Added Some marketplace UI so that it looks bit prettier. This included adding a tab feature for buy/sell using react and state features.
+
+Hour 7 
+- Added a React-Router and added a simple home page that when clicked 'Play' then renders out the game. This currently has a little bit of styling and will be revisited.
