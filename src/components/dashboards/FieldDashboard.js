@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import './FieldDashboard.css'
 
 class FieldDashboard extends Component {
 
@@ -23,19 +24,19 @@ class FieldDashboard extends Component {
   render() {
     return (
       <div className="FieldDashboard">
-        <h2>Field</h2>
+        <h2>{this.props.field.contents[0].name} Field</h2>
         {this.props.field.contents[0] && (
           <p>
-            In this field you have {this.props.field.contents.length}{" "}
+            {this.props.field.contents.length}{" "}
             {this.props.field.contents[0].name}s
             {this.props.field.contents[0].name === "Cow" && (
-              <button onClick={this.milkCows}>Milk them</button>
+              <button className="button" onClick={this.milkCows}>Milk them</button>
             )}
             {this.props.field.contents[0].name === "Sheep" && (
-              <button onClick={this.shearSheep}>Shear them</button>
+              <button className="button" onClick={this.shearSheep}>Shear them</button>
             )}
             {this.props.field.contents[0].name === "Chicken" && (
-              <button onClick={this.collectEggs}>Collect eggs</button>
+              <button className="button" onClick={this.collectEggs}>Collect eggs</button>
             )}
           </p>
           

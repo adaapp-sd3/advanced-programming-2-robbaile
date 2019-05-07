@@ -79,6 +79,7 @@ class Farm extends Drawable {
       cow.p5 = this.p5
       cow.preload()
       cow.setRandomPositionInField(25, 25, 350, 175)
+      console.log(cow)
       this.cows.objects.push(cow)
     }
     this.fields.push(new Field(25, 25, 350, 175, this.cows.objects))

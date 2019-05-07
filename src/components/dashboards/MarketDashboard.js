@@ -1,5 +1,8 @@
-import React, { Component } from "react"
-import './MarketDashboard.css'
+import React, { Component } from "react";
+import Cow from "../../models/animals/Cow";
+
+import './MarketDashboard.css';
+
 
 class MarketDashboard extends Component {
 
@@ -10,6 +13,15 @@ class MarketDashboard extends Component {
         this.props.market.grassSeedPrice
       console.log(this.props.market.currentFarmer.myFarm.seeds)
       this.props.market.currentFarmer.budget = 0
+    }
+    if (item === "cow" && this.props.market.currentFarmer.budget > 100) {
+      let cow = new Cow(this)
+      cow.preload();
+      cow.setRandomPositionInField(25, 25, 350, 175)
+      console.log(cow)
+      // this.props.market.currentFarmer.myFarm.cows.objects.push(cow);
+      this.props.market.currentFarmer.budget -= 150
+      this.props.market.currentFarmer.myFarm.cows.total += 1;
     }
   }
 
@@ -54,6 +66,11 @@ class MarketDashboard extends Component {
           <dd>
             <button onClick={() => this.buyItem("seeds")}>
               Buy seeds for {this.props.market.grassSeedPrice}
+            </button>
+          </dd>
+          <dd>
+            <button onClick={() => this.buyItem("cow")}>
+              Buy cow for £150
             </button>
           </dd>
           <dt>Solar panels</dt>
