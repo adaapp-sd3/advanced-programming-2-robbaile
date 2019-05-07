@@ -24,7 +24,7 @@ class FieldDashboard extends Component {
   render() {
     return (
       <div className="FieldDashboard">
-        <h2>{this.props.field.contents[0].name} Field</h2>
+        <h2>{this.props.field.contents[0] ? this.props.field.contents[0].name : "Empty"} Field</h2>
         {this.props.field.contents[0] && (
           <p>
             {this.props.field.contents.length}{" "}
@@ -45,7 +45,7 @@ class FieldDashboard extends Component {
           <>
             {item.showUI && (
               <div className="fieldItem">
-                <h3><img src={item.imgUrl} alt={item.name} /> {item.name}</h3>
+                <h3><img key={i} src={item.imgUrl} alt={item.name} /> {item.name}</h3>
                 <dl>
                   <dt>Hunger</dt><dd>{item.hunger}</dd>
                 </dl>

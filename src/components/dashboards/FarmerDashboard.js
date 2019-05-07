@@ -33,7 +33,6 @@ class FarmerDashboard extends Component {
             <div className="table-divider"></div>
             <p><strong>Total seeds: </strong>{this.props.farmer.myFarm.seeds.total} bunches</p>
             <div className="table-divider"></div>
-
             </>
           )}
         </div>

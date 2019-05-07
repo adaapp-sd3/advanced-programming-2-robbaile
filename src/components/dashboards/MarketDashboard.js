@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Cow from "../../models/animals/Cow";
 
 import './MarketDashboard.css';
 
@@ -15,13 +14,19 @@ class MarketDashboard extends Component {
       this.props.market.currentFarmer.budget = 0
     }
     if (item === "cow" && this.props.market.currentFarmer.budget > 100) {
-      let cow = new Cow(this)
-      cow.preload();
-      cow.setRandomPositionInField(25, 25, 350, 175)
-      console.log(cow)
-      // this.props.market.currentFarmer.myFarm.cows.objects.push(cow);
+      this.props.market.currentFarmer.myFarm.buyCow();
       this.props.market.currentFarmer.budget -= 150
       this.props.market.currentFarmer.myFarm.cows.total += 1;
+    }
+    if (item === "chicken" && this.props.market.currentFarmer.budget > 100) {
+      this.props.market.currentFarmer.myFarm.buyChicken();
+      this.props.market.currentFarmer.budget -= 150
+      this.props.market.currentFarmer.myFarm.chickens.total += 1;
+    }
+    if (item === "sheep" && this.props.market.currentFarmer.budget > 100) {
+      this.props.market.currentFarmer.myFarm.buySheep();
+      this.props.market.currentFarmer.budget -= 150
+      this.props.market.currentFarmer.myFarm.sheep.total += 1;
     }
   }
 
@@ -73,10 +78,20 @@ class MarketDashboard extends Component {
               Buy cow for £150
             </button>
           </dd>
-          <dt>Solar panels</dt>
+          <dd>
+            <button onClick={() => this.buyItem("chicken")}>
+              Buy cow for £150
+            </button>
+          </dd>
+          <dd>
+            <button onClick={() => this.buyItem("sheep")}>
+              Buy cow for £150
+            </button>
+          </dd>
+          {/* <dt>Solar panels</dt>
           <dd>{this.props.market.solarPanelPrice} per unit</dd>
           <dt>Green gas</dt>
-          <dd>{this.props.market.greenGasPrice} per unit</dd>
+          <dd>{this.props.market.greenGasPrice} per unit</dd> */}
         </dl>
 
         <h3>Sell</h3>

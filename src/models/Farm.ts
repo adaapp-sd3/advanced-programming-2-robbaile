@@ -72,6 +72,28 @@ class Farm extends Drawable {
     this.createBasicFarm()
   }
 
+  public buyCow() {
+    let cow = new Cow(this);
+    cow.p5 = this.p5;
+    cow.preload();
+    cow.setRandomPositionInField(25, 25, 350, 175);
+    this.cows.objects.push(cow);
+  }
+  public buyChicken() {
+    let chicken = new Chicken(this);
+    chicken.p5 = this.p5;
+    chicken.preload();
+    chicken.setRandomPositionInField(25, 450, 300, 125);
+    this.chickens.objects.push(chicken);
+  }
+  public buySheep() {
+    let cow = new Cow(this);
+    cow.p5 = this.p5;
+    cow.preload();
+    cow.setRandomPositionInField(25, 275, 350, 125);
+    this.cows.objects.push(cow);
+  }
+
   private createBasicFarm = () => {
     // put cows into farm
     for (let i = 0; i < this.cows.total; i++) {
@@ -79,7 +101,6 @@ class Farm extends Drawable {
       cow.p5 = this.p5
       cow.preload()
       cow.setRandomPositionInField(25, 25, 350, 175)
-      console.log(cow)
       this.cows.objects.push(cow)
     }
     this.fields.push(new Field(25, 25, 350, 175, this.cows.objects))
