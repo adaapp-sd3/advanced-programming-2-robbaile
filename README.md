@@ -8,4 +8,10 @@ Hour 2
 
 Hour 3 
 - Added the basic chicken and sheep models and hard coded them to move into the fields already created. These currently have no methods implemented on them.
-    
+
+Hour 4
+- Users can sell chickens, sheep and cows and get money for selling them
+
+Hour 5 and Hour 6 
+- Updated so that users can buy animals and they will be added to the fields that they currently have. 
+- Added Some marketplace UI so that it looks bit prettier. This included adding a tab feature for buy/sell using react and state features.

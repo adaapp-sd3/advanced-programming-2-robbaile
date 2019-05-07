@@ -79,6 +79,7 @@ class Farm extends Drawable {
     cow.setRandomPositionInField(25, 25, 350, 175);
     this.cows.objects.push(cow);
   }
+  
   public buyChicken() {
     let chicken = new Chicken(this);
     chicken.p5 = this.p5;
@@ -86,6 +87,7 @@ class Farm extends Drawable {
     chicken.setRandomPositionInField(25, 450, 300, 125);
     this.chickens.objects.push(chicken);
   }
+
   public buySheep() {
     let cow = new Cow(this);
     cow.p5 = this.p5;

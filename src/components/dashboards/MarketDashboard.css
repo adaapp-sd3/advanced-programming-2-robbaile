@@ -3,10 +3,50 @@
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
     width: 90%;
     margin: 10px auto;
+    height: 400px;
 }
 
 .dashboard-subheading {
     text-align: left;
     padding: 0 20px;
     margin: 0;
+}
+
+
+.sell-items, .buy-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;  
+}
+
+.buy-item, .sell-item {
+    width: 30%;
+    height: 80px;
+    margin: 5px;
+    background-color: #eee;
+    border-radius: 10px;
+} 
+
+.buy-button, .sell-button {
+    background-color: #ffffff;
+    border: 2px solid #545454;
+    font-size: 18px;
+    width: 120px;
+    margin-left: 0;
+    margin: 10px auto;
+    transition: 0.3s;
+}
+
+.sell-button:hover, .buy-button:hover {
+    color: #666;
+    border-color: #666;
+    cursor: pointer;
+}
+
+.tab-label {
+    background-color: #ffffff;
+    border: 2px solid #545454;
+    font-size: 18px;
+    width: 120px;
+    margin: 10px;
 }
