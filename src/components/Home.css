@@ -1,7 +1,7 @@
 .Home {
     width: 100vw;
     height: 100vh;
-    background-color: #ddd;
+    background-color: #78d361;
     text-align: center;
 }
 
@@ -21,4 +21,14 @@
 
 .Home a:hover {
     background-color: #ccc;
+}
+
+.logo {
+    height: 250px;
+    display: block;
+    margin: 10px auto;
+}
+
+.button-container {
+    margin-top: 50px;
 }

@@ -6,7 +6,11 @@ class Home extends Component {
     return (
       <div className="Home">
         <h1>Welcome to Ada Farm - The Game</h1>
-        <a href="/farm">Play!</a>
+        <img className="logo" src="/img/icons/farm-logo.svg" alt="farm"></img>
+        <div className="button-container">
+          <a href="/farm">Play!</a>
+          <a href="/instructions">Instructions</a>
+        </div>
       </div>
     )
   }
