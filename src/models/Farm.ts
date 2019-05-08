@@ -112,23 +112,23 @@ class Farm extends Drawable {
       let sheep = new Sheep(this)
       sheep.p5 = this.p5
       sheep.preload()
-      sheep.setRandomPositionInField(25, 275, 350, 125)
+      sheep.setRandomPositionInField(25, 220, 350, 125)
       this.sheep.objects.push(sheep)
     }
-    this.fields.push(new Field(25, 275, 350, 125, this.sheep.objects))
+    this.fields.push(new Field(25, 220, 350, 125, this.sheep.objects))
 
     //put chickens into farm
     for (let i = 0; i < this.chickens.total; i++) {
       let chicken = new Chicken(this)
       chicken.p5 = this.p5
       chicken.preload()
-      chicken.setRandomPositionInField(25, 450, 300, 125)
+      chicken.setRandomPositionInField(25, 365, 300, 125)
       this.chickens.objects.push(chicken)
     }
-    this.fields.push(new Field(25, 450, 300, 125, this.chickens.objects))
+    this.fields.push(new Field(25, 365, 300, 125, this.chickens.objects))
 
 
-    this.fields.push(new Field(420, 25, 250, 325))
+    this.fields.push(new Field(390, 25, 250, 325))
     for (let field of this.fields) {
       field.p5 = this.p5
       field.setHandleUpdate = this.updateUI

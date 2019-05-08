@@ -6,6 +6,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 code {
@@ -14,7 +15,7 @@ code {
 }
 
 body {
-  overflow-y: scroll;
+  overflow-y: hidden;
 }
 
 canvas {

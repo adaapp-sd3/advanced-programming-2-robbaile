@@ -3,6 +3,18 @@
     height: 100vh;
     background-color: #78d361;
     text-align: center;
+    padding-top: 100px;
+}
+
+.home-container {
+    background-color: #fff;
+    height: 500px;
+    width: 500px;
+    margin: 0 auto;
+    padding: 60px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    border-radius: 50%;
 }
 
 .Home h1 {
@@ -17,6 +29,7 @@
     padding: 10px 25px;
     font-size: 24px;
     font-weight: bold;
+    margin: 10px;
 }
 
 .Home a:hover {

@@ -1,5 +1,13 @@
 .App {
   text-align: center;
+  position: absolute;
+  top: 500px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #545454;
+  width: 100vw;
+  height: calc(vh - 500px);
 }
 
 .App h2 {

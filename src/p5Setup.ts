@@ -26,7 +26,7 @@ const makeFarm = (
     }
 
     p.setup = function() {
-      p.createCanvas(farm.width, farm.height)
+      p.createCanvas(window.innerWidth, 500)
       farmer.farm = farm
       farmer.market = market
       market.farmer = farmer
@@ -38,6 +38,14 @@ const makeFarm = (
       market.draw()
       farmer.draw()
     }
+
+    window.onresize = function() {
+      var w = window.innerWidth;
+      var h = window.innerHeight;  
+      p.resizeCanvas(w,500);
+      p.width = w;
+      p.height = h;
+    };
 
     p.keyPressed = function() {
       farmer.keyPressed()

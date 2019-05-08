@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import FarmerDashboard from "./dashboards/FarmerDashboard"
 import FieldDashboard from "./dashboards/FieldDashboard"
 import MarketDashboard from "./dashboards/MarketDashboard"
+import './FarmManager.css';
 
 class FarmManager extends Component {
   render() {
