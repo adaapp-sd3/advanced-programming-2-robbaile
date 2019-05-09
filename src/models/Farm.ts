@@ -76,7 +76,7 @@ class Farm extends Drawable {
     let cow = new Cow(this);
     cow.p5 = this.p5;
     cow.preload();
-    cow.setRandomPositionInField(25, 25, 350, 175);
+    cow.setRandomPositionInField((window.innerWidth/2 - 200) + 25, 25, 350, 175);
     this.cows.objects.push(cow);
   }
   
@@ -84,7 +84,7 @@ class Farm extends Drawable {
     let chicken = new Chicken(this);
     chicken.p5 = this.p5;
     chicken.preload();
-    chicken.setRandomPositionInField(25, 450, 300, 125);
+    chicken.setRandomPositionInField((window.innerWidth/2 - 200) + 25, 450, 300, 125);
     this.chickens.objects.push(chicken);
   }
 
@@ -92,7 +92,7 @@ class Farm extends Drawable {
     let cow = new Cow(this);
     cow.p5 = this.p5;
     cow.preload();
-    cow.setRandomPositionInField(25, 275, 350, 125);
+    cow.setRandomPositionInField((window.innerWidth/2 - 200) + 25, 275, 350, 125);
     this.cows.objects.push(cow);
   }
 
@@ -102,33 +102,33 @@ class Farm extends Drawable {
       let cow = new Cow(this)
       cow.p5 = this.p5
       cow.preload()
-      cow.setRandomPositionInField(25, 25, 350, 175)
+      cow.setRandomPositionInField((window.innerWidth/2 - 300) + 25, 25, 350, 175)
       this.cows.objects.push(cow)
     }
-    this.fields.push(new Field(25, 25, 350, 175, this.cows.objects))
+    this.fields.push(new Field((window.innerWidth/2 - 300) + 25, 25, 350, 175, this.cows.objects))
     
     //put sheep into farm
     for (let i = 0; i < this.sheep.total; i++) {
       let sheep = new Sheep(this)
       sheep.p5 = this.p5
       sheep.preload()
-      sheep.setRandomPositionInField(25, 220, 350, 125)
+      sheep.setRandomPositionInField((window.innerWidth/2 - 300) + 25, 220, 350, 125)
       this.sheep.objects.push(sheep)
     }
-    this.fields.push(new Field(25, 220, 350, 125, this.sheep.objects))
+    this.fields.push(new Field((window.innerWidth/2 - 300) + 25, 220, 350, 125, this.sheep.objects))
 
     //put chickens into farm
     for (let i = 0; i < this.chickens.total; i++) {
       let chicken = new Chicken(this)
       chicken.p5 = this.p5
       chicken.preload()
-      chicken.setRandomPositionInField(25, 365, 300, 125)
+      chicken.setRandomPositionInField((window.innerWidth/2 - 300) + 25, 365, 300, 125)
       this.chickens.objects.push(chicken)
     }
-    this.fields.push(new Field(25, 365, 300, 125, this.chickens.objects))
+    this.fields.push(new Field((window.innerWidth/2 - 300) + 25, 365, 300, 125, this.chickens.objects))
 
 
-    this.fields.push(new Field(390, 25, 250, 325))
+    this.fields.push(new Field((window.innerWidth/2 - 300) + 390, 25, 250, 325))
     for (let field of this.fields) {
       field.p5 = this.p5
       field.setHandleUpdate = this.updateUI

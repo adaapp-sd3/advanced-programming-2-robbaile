@@ -23,7 +23,7 @@ class Market extends Drawable {
 
   constructor() {
     super()
-    this.x = 500
+    this.x = (window.innerWidth/2 - 250) + 500
     this.y = 400
     this.width = 60
     this.height = 60

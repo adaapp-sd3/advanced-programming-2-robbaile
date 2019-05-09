@@ -1,5 +1,6 @@
 .MarketDashboard {
-    color: #666;
+    color: #fff;
+    background-color: #515467;
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
     width: 90%;
     margin: 10px;
@@ -12,7 +13,7 @@
 }
 
 .sell-tab, .buy-tab {
-    background-color: #2196F3;
+    /* background-color: #EBCA7B; */
     padding-bottom: 10px;
 }
 
@@ -34,45 +35,45 @@
     width: 30%;
     height: 80px;
     margin: 5px;
-    background-color: #2186F2;
+    background-color: #CAD6E3;
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    color: #fff;
+    color: #545454;
     border-radius: 10px;
 } 
 
 .buy-button, .sell-button {
     background-color: transparent;
-    border: 2px solid #fff;
-    color: #fff;
+    border: 2px solid #545454;
+    color: #545454;
     font-size: 18px;
     width: 120px;
     margin-left: 0;
     margin: 10px auto;
-    transition: 0.3s;
+    transition: 0.2s;
 }
 
 .sell-button:hover, .buy-button:hover {
-    color: #eee;
-    border-color: #eee;
+    color: #848484;
+    border-color: #848484;
     cursor: pointer;
 }
 
 .tab-label {
-    background-color: #ffffff;
-    border: 2px solid #2196F3;
-    color: #2196F3;
-    border-bottom: none;
+    background-color: transparent;
+    border: 2px solid #EBCA7B;
+    color: #EBCA7B;
     font-size: 18px;
     width: 120px;
     margin: 15px 10px 0 10px;
 }
 
-.buy-label__true {
-    background-color: #2196F3;
+.buy-label__true, .sell-label__false {
+    background-color: #EBCA7B;
     color: #fff;
 }
 
-.sell-label__false {
-    background-color: #2196F3;
+.tab-label:hover {
+    cursor: pointer;
+    background-color: #EBCA7B;
     color: #fff;
 }

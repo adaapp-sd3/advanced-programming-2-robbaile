@@ -5,7 +5,7 @@ import Market from "./Market"
 class Farmer extends Drawable {
   myFarm!: Farm
   localMarket!: Market
-  budget: number = 1000
+  budget: number = 1000;
   showUI: boolean = true
   currentLocation: any
   imgUrl = "/img/farmer.png"

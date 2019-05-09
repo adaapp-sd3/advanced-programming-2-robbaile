@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import './FieldDashboard.css'
+// import { access } from "fs";
 
 class FieldDashboard extends Component {
 
@@ -41,18 +42,7 @@ class FieldDashboard extends Component {
           </p>
           
         )}
-        {this.props.field.contents.map((item, i) => (
-          <>
-            {item.showUI && (
-              <div className="fieldItem">
-                <h3><img key={i} src={item.imgUrl} alt={item.name} /> {item.name}</h3>
-                <dl>
-                  <dt>Hunger</dt><dd>{item.hunger}</dd>
-                </dl>
-              </div>
-            )}
-          </>
-        ))}
+        <p>Average Hunger: {(this.props.field.contents.reduce((accumulator, currentValue) => accumulator + currentValue.hunger, 0) / this.props.field.contents.length).toFixed(1)}</p>
       </div>
     )
   }
