@@ -22,7 +22,7 @@ class App extends Component {
   }
 
   getWeather() {
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${this.props.name},uk&appid=6705128fe3020152d1320189697818af`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${this.props.name ? this.props.name : 'London'},uk&appid=6705128fe3020152d1320189697818af`)
       .then(res => res.json())
       .then(
         (res) => {
@@ -37,13 +37,11 @@ class App extends Component {
             }
           });
         },
-        (err) => {
-          this.setState({
-            isLoaded: true,
-            err
-          });
-        }
+        (err) => {console.log(err)}
       )
+      .catch((err) => {
+        alert("Location has not been Found");
+    });
   }
 
   componentDidMount() {

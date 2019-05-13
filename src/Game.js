@@ -7,21 +7,14 @@ import Instructions from "./components/Instructions";
 
 
 class Game extends Component {
-  state = {
-    name: 'London'
-  }
 
-  handlePlayClick = (city) => {
-    this.setState({ name: city });
-  }
-  
   render() {
     return (
     <Router>
         <div>
-            <Route exact path="/" render={() => <Home handlePlayClick={this.handlePlayClick}/>} />
+            <Route exact path="/" render={() => <Home />} />
             <Route exact path="/instructions" component={Instructions} />
-            <Route exact path="/farm" render={() => <App name={this.state.name} />} />
+            <Route exact path="/farm" render={() => <App name={localStorage.getItem("name")} />} />
         </div>
     </Router>
     )
