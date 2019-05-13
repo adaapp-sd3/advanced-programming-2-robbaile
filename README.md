@@ -20,4 +20,7 @@ Hour 7
 - Added a React-Router and added a simple home page that when clicked 'Play' then renders out the game. This currently has a little bit of styling and will be revisited.
 
 Hour 8 
-- Added instructions page and styled home page. This included drawing SVG icon for the homescreen 
+- Added instructions page and styled home page. This included drawing SVG icon for the homescreen
+
+Hour 9 & Hour 10 
+- Added a weather API and rendered out a weather dashboard. Location initially hardcoded. Started adding a text input on homepage that will update the weather based on where you are.  
