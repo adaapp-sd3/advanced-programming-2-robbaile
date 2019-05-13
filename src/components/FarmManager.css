@@ -1,5 +1,28 @@
 .FarmManager {
     width: 100%;
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "weather field market"
+        "farmer field market"   
+        "farmer field market";
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+.weather {
+    grid-area: "weather"
+}
+
+.field {
+    grid-area: "field"
+}
+
+.farmer {
+    grid-area: "farmer"
+}
+
+.market {
+    grid-area: "market"
 }

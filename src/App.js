@@ -12,7 +12,8 @@ class App extends Component {
   state = {
     farmer: new Farmer(),
     farm: new Farm(),
-    market: new Market()
+    market: new Market(),
+    weather: ''
   }
 
   // allow instances to to tell us when they change
@@ -20,7 +21,31 @@ class App extends Component {
     this.setState(newThing)
   }
 
-  //
+  getWeather() {
+    fetch("https://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=6705128fe3020152d1320189697818af")
+      .then(res => res.json())
+      .then(
+        (res) => {
+            let celcius = parseFloat(res.main.temp);
+            let conversion = 273.15;
+            let temp = (celcius - conversion).toFixed(1);
+          this.setState({
+            weather: {
+                main: res.weather[0].main,
+                temp: temp,
+                location: res.name
+            }
+          });
+        },
+        (err) => {
+          this.setState({
+            isLoaded: true,
+            err
+          });
+        }
+      )
+  }
+
   componentDidMount() {
     let sketch = makeFarm(
       this.state.farm,
@@ -31,18 +56,14 @@ class App extends Component {
     this.setState({
       myP5: new p5(sketch, "sketch")
     })
+
+    this.getWeather()
   }
 
   render() {
     return (
       <div className="App">
-        {/* <header className="App-header">
-          <h2>
-            <img src="/img/farmer.png" className="App-logo" alt="logo" />{" "}
-            Dashboard
-          </h2>
-        </header> */}
-        <FarmManager farmer={this.state.farmer} farm={this.state.farm} market={this.state.market} />
+        <FarmManager name={this.props.name} weather={this.state.weather} farmer={this.state.farmer} farm={this.state.farm} market={this.state.market} />
       </div>
     )
   }

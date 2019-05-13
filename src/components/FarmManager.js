@@ -9,15 +9,16 @@ class FarmManager extends Component {
   render() {
     return (
       <div className="FarmManager">
-        <WeatherDashboard />
+        <WeatherDashboard weather={this.props.weather} name={this.props.name} className="weather"/>
+
         {this.props.farmer.showUI && (
-          <FarmerDashboard farmer={this.props.farmer} />
+          <FarmerDashboard farmer={this.props.farmer} className="farmer"/>
         )}
         {this.props.farm.fields.map((field,i) => (
-          <>{field.showUI && <FieldDashboard key={i} field={field} />}</>
+          <>{field.showUI && <FieldDashboard key={i} field={field} className="field"/>}</>
         ))}
         {this.props.market.showUI && (
-          <MarketDashboard market={this.props.market} />
+          <MarketDashboard market={this.props.market} className="market"/>
         )}
       </div>
     )
