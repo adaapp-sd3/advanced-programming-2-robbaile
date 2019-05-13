@@ -8,21 +8,20 @@ import Instructions from "./components/Instructions";
 
 class Game extends Component {
   state = {
-    name: ''
+    name: 'London'
   }
 
-  handlePlayClick() {
-    let city = document.querySelector('.city-input').value;
-    this.setState({ name: city })
+  handlePlayClick = (city) => {
+    this.setState({ name: city });
   }
   
   render() {
     return (
     <Router>
         <div>
-            <Route exact path="/" handlePlayClick={this.handlePlayClick.bind(this)} component={Home} />
+            <Route exact path="/" render={() => <Home handlePlayClick={this.handlePlayClick}/>} />
             <Route exact path="/instructions" component={Instructions} />
-            <Route exact path="/farm" name={this.state.name} component={App} />
+            <Route exact path="/farm" render={() => <App name={this.state.name} />} />
         </div>
     </Router>
     )
