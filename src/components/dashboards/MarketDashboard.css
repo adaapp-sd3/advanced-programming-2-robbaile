@@ -2,6 +2,7 @@
     color: #fff;
     background-color: #515467;
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    border-radius: 10px;
 }
 
 .dashboard-subheading {
@@ -11,7 +12,6 @@
 }
 
 .sell-tab, .buy-tab {
-    /* background-color: #EBCA7B; */
     padding-bottom: 10px;
 }
 
@@ -31,7 +31,7 @@
 
 .buy-item, .sell-item {
     width: 30%;
-    height: 80px;
+    height: 100px;
     margin: 5px;
     background-color: #CAD6E3;
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
@@ -44,9 +44,9 @@
     border: 2px solid #545454;
     color: #545454;
     font-size: 18px;
-    width: 120px;
+    width: 90%;
     margin-left: 0;
-    margin: 10px auto;
+    margin: 15px auto;
     transition: 0.2s;
 }
 
