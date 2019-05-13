@@ -22,7 +22,9 @@ Hour 7
 Hour 8 
 - Added instructions page and styled home page. This included drawing SVG icon for the homescreen
 
-Hour 9 & Hour 10 
+Hour 9  
 - Added a weather API and rendered out a weather dashboard. Location initially hardcoded. 
 - Started adding a text input on homepage that will update the weather based on where you are.  
+
+Hour 10
 - Found solution for setting location using localStorage as state was refreshing
