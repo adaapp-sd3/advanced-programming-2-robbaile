@@ -55,7 +55,7 @@ class Farmer extends Drawable {
         if(!field.contents[0] || field.contents[0].name === "Corn") {
           if(this.myFarm.seeds.total > 0){
             if(this.p5.keyIsDown(this.p5.ENTER)){
-              field.plant(this.x + 50, this.y + 50)
+              field.plant(this.x + 50, this.y + 50, this.myFarm)
               this.myFarm.seeds.total -= 1
             }
           }

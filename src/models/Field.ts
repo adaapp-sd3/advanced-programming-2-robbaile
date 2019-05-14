@@ -1,5 +1,6 @@
 import Drawable from "./abstract/Drawable";
 import Corn from "./crops/Corn";
+import Farm from "./Farm";
 
 class Field extends Drawable {
   image: any
@@ -31,9 +32,9 @@ class Field extends Drawable {
     }
   }
 
-  plant(x: number, y: number) {
+  plant(x: number, y: number, farm: Farm) {
     console.log("new plant")
-    let corn = new Corn()
+    let corn = new Corn(farm)
     corn.p5 = this.p5
     corn.preload()
     corn.plant(x, y)
