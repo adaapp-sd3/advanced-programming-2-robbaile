@@ -22,6 +22,12 @@ class FieldDashboard extends Component {
     }
   }
 
+  // averageHunger() {(this.props.field.contents.reduce((accumulator, currentValue) => accumulator + currentValue.hunger, 0) / this.props.field.contents.length).toFixed(1)}
+
+  // plantCorn = () => {
+  //   console.log("Corn")
+  // }
+
   render() {
     return (
       <div className="FieldDashboard">
@@ -43,12 +49,18 @@ class FieldDashboard extends Component {
           
         )}
         {this.props.field.contents[0] ? (
-          <p>Average Hunger: {(this.props.field.contents.reduce((accumulator, currentValue) => accumulator + currentValue.hunger, 0) / this.props.field.contents.length).toFixed(1)}</p>
+          <div>
+            <p>Average Hunger: {(this.props.field.contents.reduce((accumulator, currentValue) => accumulator + currentValue.hunger, 0) / this.props.field.contents.length).toFixed(1)}</p>
+            <div>{(this.props.field.contents.reduce((accumulator, currentValue) => accumulator + currentValue.hunger, 0) / this.props.field.contents.length).toFixed(1) > 4.8 ? (
+              <p>Feed the {this.props.field.contents[0].genus}</p>
+            ) : <p></p>}</div>
+          </div>
           ) : (
-            <div>
-              <h2>Plant this field</h2>
-              <p>Corn</p>
-            </div>
+            <p></p>
+            // <div>
+            //   <h2>Plant this field</h2>
+            //   <button onClick={this.plantCorn}>Plant Corn</button>
+            // </div>
           )
         }
         

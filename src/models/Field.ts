@@ -33,14 +33,11 @@ class Field extends Drawable {
 
   plant(x: number, y: number) {
     console.log("new plant")
-    if(this.contents[0].genus !== "Cows" || this.contents[0].genus !== "Chickens" || this.contents[0].genus !== "Sheep" ) {
-      let corn = new Corn(this.myP5)
-      console.log(this.contents[0])
-      corn.p5 = this.p5
-      corn.preload()
-      corn.plant(x, y)
-      this.contents.push(corn)
-    }
+    let corn = new Corn()
+    corn.p5 = this.p5
+    corn.preload()
+    corn.plant(x, y)
+    this.contents.push(corn)
   }
 }
 

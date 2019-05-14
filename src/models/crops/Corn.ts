@@ -1,17 +1,15 @@
 import Crop from '../abstract/Crop';
-import Farm from "../Farm";
+//import Farm from "../Farm";
 
 class Corn extends Crop {
   name: string = "Corn"
   genus: string = "Corn"
   imgUrl: string = "/img/twtr/1f33d.png"
-  eats: string = "straw"
-  hunger: number = 5
-  farm: Farm
+  //farm: Farm
   
-  constructor(farm: Farm) {
+  constructor() {
     super()
-    this.farm = farm
+    //this.farm = farm
   }
     
     public preload() {
@@ -19,10 +17,8 @@ class Corn extends Crop {
     }
   
     public draw(): any {
-  
       this.constrainItem()
       this.stopForFarmer()
-  
     }
   }
   export default Corn;
