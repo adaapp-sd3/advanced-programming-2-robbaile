@@ -42,7 +42,16 @@ class FieldDashboard extends Component {
           </p>
           
         )}
-        <p>Average Hunger: {(this.props.field.contents.reduce((accumulator, currentValue) => accumulator + currentValue.hunger, 0) / this.props.field.contents.length).toFixed(1)}</p>
+        {this.props.field.contents[0] ? (
+          <p>Average Hunger: {(this.props.field.contents.reduce((accumulator, currentValue) => accumulator + currentValue.hunger, 0) / this.props.field.contents.length).toFixed(1)}</p>
+          ) : (
+            <div>
+              <h2>Plant this field</h2>
+              <p>Corn</p>
+            </div>
+          )
+        }
+        
       </div>
     )
   }

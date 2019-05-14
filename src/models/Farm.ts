@@ -3,6 +3,7 @@ import Field from "./Field";
 import Cow from "./animals/Cow";
 import Sheep from './animals/Sheep';
 import Chicken from './animals/Chicken';
+
 class Farm extends Drawable {
   fields: Field[] = []
   width: number = 700
@@ -15,6 +16,7 @@ class Farm extends Drawable {
   wool: any
   eggs: any
   seeds: any
+  corn: any
   constructor(
     cows: any = {
       name: "Cows",
@@ -55,6 +57,11 @@ class Farm extends Drawable {
       name: "Grass seeds",
       total: 0,
       unit: "bunches"
+    },
+    corn: any = {
+      name: "Corn",
+      total: 0,
+      unit: "Kilos"
     }
   ) {
     super()
@@ -66,6 +73,7 @@ class Farm extends Drawable {
     this.wool = wool
     this.eggs = eggs
     this.seeds = seeds
+    this.corn = corn
   }
 
   public preload() {
@@ -76,7 +84,7 @@ class Farm extends Drawable {
     let cow = new Cow(this);
     cow.p5 = this.p5;
     cow.preload();
-    cow.setRandomPositionInField((window.innerWidth/2 - 200) + 25, 25, 350, 175);
+    cow.setRandomPositionInField((window.innerWidth/2 - 300) + 25, 25, 350, 175);
     this.cows.objects.push(cow);
   }
   
@@ -84,7 +92,7 @@ class Farm extends Drawable {
     let chicken = new Chicken(this);
     chicken.p5 = this.p5;
     chicken.preload();
-    chicken.setRandomPositionInField((window.innerWidth/2 - 200) + 25, 450, 300, 125);
+    chicken.setRandomPositionInField((window.innerWidth/2 - 300) + 25, 365, 300, 125);
     this.chickens.objects.push(chicken);
   }
 
@@ -92,7 +100,7 @@ class Farm extends Drawable {
     let cow = new Cow(this);
     cow.p5 = this.p5;
     cow.preload();
-    cow.setRandomPositionInField((window.innerWidth/2 - 200) + 25, 275, 350, 125);
+    cow.setRandomPositionInField((window.innerWidth/2 - 300) + 25, 275, 350, 125);
     this.cows.objects.push(cow);
   }
 

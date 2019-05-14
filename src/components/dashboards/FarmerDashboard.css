@@ -26,15 +26,15 @@
 .table-divider {
     background-color: #ecf0f1;
     height: 1px;
-    width: 50%;
-    margin: 5px auto;
+    width: 70%;
+    margin: 3px auto;
 }
 
 .hide-button {
     background-color: #ffffff;
     border: 2px solid #545454;
     font-size: 18px;
-    margin: 20px;
+    margin: 0 0 15px 0;
     transition: 0.3s;
 }
 

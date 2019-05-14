@@ -1,6 +1,7 @@
 import Drawable from "./abstract/Drawable"
 import Farm from "./Farm"
 import Market from "./Market"
+import Field from "./Field"
 
 class Farmer extends Drawable {
   myFarm!: Farm
@@ -51,6 +52,10 @@ class Farmer extends Drawable {
       if (field.containsPoint(this.x + this.height, this.y + this.width)) {
         this.farmerCurrentLocation = field
         field.farmerPresent = true
+        if (this.p5.keyCode == this.p5.ENTER) {
+          field.plant(this.x, this.y)
+          return; 
+        }
       } else {
         field.farmerPresent = false
       }

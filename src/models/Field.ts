@@ -1,4 +1,5 @@
-import Drawable from "./abstract/Drawable"
+import Drawable from "./abstract/Drawable";
+import Corn from "./crops/Corn";
 
 class Field extends Drawable {
   image: any
@@ -32,10 +33,14 @@ class Field extends Drawable {
 
   plant(x: number, y: number) {
     console.log("new plant")
-    // Get the crop name from the field name
-    // var cropName = this.name.split(" ") // => e.g. "Wheat"
-    // // Add a new crop to the field's list of crops
-    // this.crops.push(new Crop(cropName[0], this, x, y))
+    if(this.contents[0].genus !== "Cows" || this.contents[0].genus !== "Chickens" || this.contents[0].genus !== "Sheep" ) {
+      let corn = new Corn(this.myP5)
+      console.log(this.contents[0])
+      corn.p5 = this.p5
+      corn.preload()
+      corn.plant(x, y)
+      this.contents.push(corn)
+    }
   }
 }
 

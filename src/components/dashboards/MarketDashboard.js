@@ -40,6 +40,10 @@ class MarketDashboard extends Component {
       this.props.market.currentFarmer.budget -= 150
       this.props.market.currentFarmer.myFarm.sheep.total += 1;
     }
+    if (item === "straw" && this.props.market.currentFarmer.budget > 99) {
+      this.props.market.currentFarmer.myFarm.straw.total += 100;
+      this.props.market.currentFarmer.budget -= 100
+    }
   }
 
   sellItem = item => {
@@ -100,6 +104,10 @@ class MarketDashboard extends Component {
             <div className="buy-item">
               <dt>Sheep</dt>
               <button className="buy-button" onClick={() => this.buyItem("sheep")}>Buy sheep</button>
+            </div>
+            <div className="buy-item">
+              <dt>Straw</dt>
+              <button className="buy-button" onClick={() => this.buyItem("straw")}>Buy straw</button>
             </div>
           </div>
         </div>
