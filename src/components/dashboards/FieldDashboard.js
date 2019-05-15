@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import './FieldDashboard.css'
-// import { access } from "fs";
+
 
 class FieldDashboard extends Component {
 
@@ -22,18 +22,19 @@ class FieldDashboard extends Component {
     }
   }
 
-  // averageHunger() {(this.props.field.contents.reduce((accumulator, currentValue) => accumulator + currentValue.hunger, 0) / this.props.field.contents.length).toFixed(1)}
-
-  // plantCorn = () => {
-  //   console.log("Corn")
-  // }
+  harvestCorn = () => {
+    this.props.field.contents.forEach(field => {
+      this.props.field.contents.pop();
+      this.props.farmer.budget += 50
+    });
+  }
 
   render() {
     return (
       <div className="FieldDashboard">
         <h2>{this.props.field.contents[0] ? this.props.field.contents[0].name : "Empty"} Field</h2>
         {this.props.field.contents[0] && (
-          <p>
+          <div>
             {this.props.field.contents.length}{" "}
             {this.props.field.contents[0].name}s
             {this.props.field.contents[0].name === "Cow" && (
@@ -45,10 +46,22 @@ class FieldDashboard extends Component {
             {this.props.field.contents[0].name === "Chicken" && (
               <button className="button" onClick={this.collectEggs}>Collect eggs</button>
             )}
-          </p>
+            {this.props.field.contents[0].name === "Corn" && (
+              <div>
+                <p>Average age: {(this.props.field.contents.reduce((accumulator, currentValue) => accumulator + currentValue.getAge(), 0) / this.props.field.contents.length).toFixed(0)} weeks</p>
+                {(this.props.field.contents.reduce((accumulator, currentValue) => accumulator + currentValue.getAge(), 0) / this.props.field.contents.length).toFixed(0) > 30 ? (
+                <div>
+                  <p>Corn is ready to harvest</p> 
+                  <button onClick={this.harvestCorn}>Harvest</button>
+                </div> 
+                ) : (
+                <p>Corn is currently growing</p>)}
+              </div>
+            )}
+          </div>
           
         )}
-        {this.props.field.contents[0] ? (
+        {this.props.field.contents[0] && (this.props.field.contents[0].name === "Sheep" || this.props.field.contents[0].name === "Chicken" || this.props.field.contents[0].name === "Cow") ? (
           <div>
             <p>Average Hunger: {(this.props.field.contents.reduce((accumulator, currentValue) => accumulator + currentValue.hunger, 0) / this.props.field.contents.length).toFixed(1)}</p>
             <div>{(this.props.field.contents.reduce((accumulator, currentValue) => accumulator + currentValue.hunger, 0) / this.props.field.contents.length).toFixed(1) > 4.8 ? (
@@ -57,10 +70,6 @@ class FieldDashboard extends Component {
           </div>
           ) : (
             <p></p>
-            // <div>
-            //   <h2>Plant this field</h2>
-            //   <button onClick={this.plantCorn}>Plant Corn</button>
-            // </div>
           )
         }
         

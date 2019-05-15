@@ -1,17 +1,18 @@
 import ConstrainedByField from './ConstrainedByField';
 
 abstract class Crop extends ConstrainedByField {
-  height = 16
-  width = 16
+  height: any = 16
+  width: any = 16
   health: number = 10 
-  healthySize: number = 50 
+  healthySize: any = 50 
 
   plant(
     fieldX: number,
     fieldY: number,
   ) {
     this.x = fieldX;
-    this.y = fieldY
+    this.y = fieldY;
+    // this.height = height
   }
 }
 
