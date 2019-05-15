@@ -135,8 +135,8 @@ class Farm extends Drawable {
     }
     this.fields.push(new Field((window.innerWidth/2 - 300) + 25, 365, 300, 125, this.chickens.objects))
 
-
     this.fields.push(new Field((window.innerWidth/2 - 300) + 390, 25, 250, 325))
+
     for (let field of this.fields) {
       field.p5 = this.p5
       field.setHandleUpdate = this.updateUI

@@ -26,7 +26,7 @@ class FarmerDashboard extends Component {
             <div className="table-divider"></div>
             <p><strong>Total straw: </strong>{this.props.farmer.myFarm.straw.total} bails</p>
             <div className="table-divider"></div>
-            <p><strong>Total seeds: </strong>{this.props.farmer.myFarm.seeds.total} bunches</p>
+            <p><strong>Total seeds: </strong>{this.props.farmer.myFarm.seeds.total} | <strong>Total corn: </strong>{this.props.farmer.myFarm.corn.total} kilos</p>
             </>
           )}
         </div>

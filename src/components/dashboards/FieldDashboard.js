@@ -23,10 +23,10 @@ class FieldDashboard extends Component {
   }
 
   harvestCorn = () => {
-    this.props.field.contents.forEach(field => {
+    for (var i=0; i<this.props.field.contents.length; i++) {
       this.props.field.contents.pop();
-      this.props.farmer.budget += 50
-    });
+      this.props.farmer.myFarm.corn.total += 1
+    };
   }
 
   render() {
