@@ -144,7 +144,7 @@ class MarketDashboard extends Component {
                 <button className="sell-button" onClick={() => this.sellItem("eggs")}>Sell eggs</button>
               </div>
               <div className="sell-item">
-                <dt>Seeds</dt>
+                <dt>Corn</dt>
                 <button className="sell-button" onClick={() => this.sellItem("corn")}>Sell corn</button>
               </div>                                                   
             </div>
