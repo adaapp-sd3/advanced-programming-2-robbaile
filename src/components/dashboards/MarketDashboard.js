@@ -74,6 +74,10 @@ class MarketDashboard extends Component {
       this.props.market.currentFarmer.myFarm.sheep.total -= 1;
       this.props.market.currentFarmer.myFarm.sheep.objects.pop();
     }
+    if (item === "corn" && this.props.market.currentFarmer.myFarm.corn.total > 1) {
+      this.props.market.currentFarmer.budget += this.props.market.currentFarmer.myFarm.corn.total * 2;
+      this.props.market.currentFarmer.myFarm.corn.total -= this.props.market.currentFarmer.myFarm.corn.total;
+    }
   }
 
   render() {
@@ -138,6 +142,10 @@ class MarketDashboard extends Component {
               <div className="sell-item">
                 <dt>Eggs</dt>
                 <button className="sell-button" onClick={() => this.sellItem("eggs")}>Sell eggs</button>
+              </div>
+              <div className="sell-item">
+                <dt>Seeds</dt>
+                <button className="sell-button" onClick={() => this.sellItem("corn")}>Sell corn</button>
               </div>                                                   
             </div>
         </div>

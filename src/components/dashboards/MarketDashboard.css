@@ -31,7 +31,7 @@
 
 .buy-item, .sell-item {
     width: 30%;
-    height: 100px;
+    height: 50px;
     margin: 5px;
     background-color: #CAD6E3;
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
