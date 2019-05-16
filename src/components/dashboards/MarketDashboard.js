@@ -95,23 +95,23 @@ class MarketDashboard extends Component {
           <div className="buy-items">
             <div className="buy-item">
               <dt>Seeds</dt>
-              <button className="buy-button" onClick={() => this.buyItem("seeds")}>Buy seeds</button>
+              <button className="buy-button" onClick={() => this.buyItem("seeds")}>Buy</button>
             </div>
             <div className="buy-item">
               <dt>Cows</dt> 
-              <button className="buy-button" onClick={() => this.buyItem("cow")}>Buy cow</button>
+              <button className="buy-button" onClick={() => this.buyItem("cow")}>Buy</button>
             </div>
             <div className="buy-item">
               <dt>Chickens</dt>  
-              <button className="buy-button" onClick={() => this.buyItem("chicken")}>Buy chicken</button>
+              <button className="buy-button" onClick={() => this.buyItem("chicken")}>Buy</button>
             </div>
             <div className="buy-item">
               <dt>Sheep</dt>
-              <button className="buy-button" onClick={() => this.buyItem("sheep")}>Buy sheep</button>
+              <button className="buy-button" onClick={() => this.buyItem("sheep")}>Buy</button>
             </div>
             <div className="buy-item">
               <dt>Straw</dt>
-              <button className="buy-button" onClick={() => this.buyItem("straw")}>Buy straw</button>
+              <button className="buy-button" onClick={() => this.buyItem("straw")}>Buy</button>
             </div>
           </div>
         </div>
@@ -121,31 +121,31 @@ class MarketDashboard extends Component {
             <div className="sell-items">
               <div className="sell-item">
                 <dt>Milk</dt>
-                <button className="sell-button" onClick={() => this.sellItem("milk")}>Sell milk</button>
+                <button className="sell-button" onClick={() => this.sellItem("milk")}>Sell</button>
               </div>
               <div className="sell-item">
                 <dt>Cow</dt>
-                <button className="sell-button" onClick={() => this.sellItem("cow")}>Sell cow</button>
+                <button className="sell-button" onClick={() => this.sellItem("cow")}>Sell</button>
               </div>
               <div className="sell-item">
                 <dt>Wool</dt>
-                <button className="sell-button" onClick={() => this.sellItem("wool")}>Sell wool</button>
+                <button className="sell-button" onClick={() => this.sellItem("wool")}>Sell</button>
               </div>
               <div className="sell-item">
                 <dt>Sheep</dt>
-                <button className="sell-button" onClick={() => this.sellItem("sheep")}>Sell sheep</button>
+                <button className="sell-button" onClick={() => this.sellItem("sheep")}>Sell</button>
               </div>
               <div className="sell-item">
                 <dt>Chickens</dt>
-                <button className="sell-button" onClick={() => this.sellItem("chicken")}>Sell chicken</button>
+                <button className="sell-button" onClick={() => this.sellItem("chicken")}>Sell</button>
               </div>
               <div className="sell-item">
                 <dt>Eggs</dt>
-                <button className="sell-button" onClick={() => this.sellItem("eggs")}>Sell eggs</button>
+                <button className="sell-button" onClick={() => this.sellItem("eggs")}>Sell</button>
               </div>
               <div className="sell-item">
                 <dt>Corn</dt>
-                <button className="sell-button" onClick={() => this.sellItem("corn")}>Sell corn</button>
+                <button className="sell-button" onClick={() => this.sellItem("corn")}>Sell</button>
               </div>                                                   
             </div>
         </div>

@@ -31,7 +31,7 @@
 
 .buy-item, .sell-item {
     width: 30%;
-    height: 50px;
+    height: 65px;
     margin: 5px;
     background-color: #CAD6E3;
     box-shadow: 0 5px 15px rgba(0,0,0,0.08);
@@ -46,7 +46,7 @@
     font-size: 18px;
     width: 90%;
     margin-left: 0;
-    margin: 15px auto;
+    margin: 5px auto;
     transition: 0.2s;
 }
 
