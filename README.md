@@ -28,3 +28,15 @@ Hour 9
 
 Hour 10
 - Found solution for setting location using localStorage as state was refreshing
+
+Hour 11 
+- Added corn/crop classes and added the ability to plant crops in the farm if a field is empty
+
+Hour 12 
+- Added the ability to harvest the crops when the average age of them is over 30 weeks
+
+Hour 13 
+- Added a level system where you progress levels each time you double your income 
+
+Hour 14 
+- Updated grow method and changed some css so that level dashboard will work

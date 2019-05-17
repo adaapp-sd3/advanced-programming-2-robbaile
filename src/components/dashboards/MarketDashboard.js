@@ -59,17 +59,17 @@ class MarketDashboard extends Component {
       this.props.market.currentFarmer.budget += this.props.market.currentFarmer.myFarm.wool.total * 10
       this.props.market.currentFarmer.myFarm.wool.total = 0;
     }
-    if (item === "cow" && this.props.market.currentFarmer.myFarm.cows.total > 1) {
+    if (item === "cow" && this.props.market.currentFarmer.myFarm.cows.total > 0) {
       this.props.market.currentFarmer.budget += 150
       this.props.market.currentFarmer.myFarm.cows.total -= 1;
       this.props.market.currentFarmer.myFarm.cows.objects.pop();
     }
-    if (item === "chicken" && this.props.market.currentFarmer.myFarm.chickens.total > 1) {
+    if (item === "chicken" && this.props.market.currentFarmer.myFarm.chickens.total > 0) {
       this.props.market.currentFarmer.budget += 100
       this.props.market.currentFarmer.myFarm.chickens.total -= 1;
       this.props.market.currentFarmer.myFarm.chickens.objects.pop();
     }
-    if (item === "sheep" && this.props.market.currentFarmer.myFarm.sheep.total > 1) {
+    if (item === "sheep" && this.props.market.currentFarmer.myFarm.sheep.total > 0) {
       this.props.market.currentFarmer.budget += 100
       this.props.market.currentFarmer.myFarm.sheep.total -= 1;
       this.props.market.currentFarmer.myFarm.sheep.objects.pop();
