@@ -30,7 +30,7 @@ class Farm extends Drawable {
     },
     chickens: any = {
       name: "Chickens",
-      total: 42,
+      total: 2,
       objects: []
     },
     straw: any = {
