@@ -6,14 +6,18 @@
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: 
         "weather field market"
-        "farmer field market"   
-        "farmer field market";
+        "level field market"   
+        "farmer market";
     grid-column-gap: 10px;
     grid-row-gap: 10px;
 }
 
 .weather {
     grid-area: "weather"
+}
+
+.level {
+    grid-area: "level"
 }
 
 .field {

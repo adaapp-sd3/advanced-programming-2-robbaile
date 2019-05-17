@@ -13,7 +13,9 @@ class App extends Component {
     farmer: new Farmer(),
     farm: new Farm(),
     market: new Market(),
-    weather: ''
+    weather: '',
+    level: 1,
+    nextLevelTarget: 5000
   }
 
   // allow instances to to tell us when they change
@@ -58,10 +60,18 @@ class App extends Component {
     this.getWeather()
   }
 
+  componentDidUpdate() {
+    if(this.state.farmer.budget > this.state.nextLevelTarget) {
+      this.setState({level: this.state.level + 1});
+      this.setState({nextLevelTarget: this.state.nextLevelTarget * 2});
+      alert(`Congrats! you are now level ${this.state.level + 1}`)
+    }
+  }
+
   render() {
     return (
       <div className="App">
-        <FarmManager name={this.props.name} weather={this.state.weather} farmer={this.state.farmer} farm={this.state.farm} market={this.state.market} />
+        <FarmManager name={this.props.name} level={this.state.level} weather={this.state.weather} farmer={this.state.farmer} farm={this.state.farm} market={this.state.market} />
       </div>
     )
   }

@@ -48,16 +48,16 @@ class MarketDashboard extends Component {
 
   sellItem = item => {
     if (item === "milk" && this.props.market.currentFarmer.myFarm.milk.total > 10) {
-      this.props.market.currentFarmer.myFarm.milk.total -= 10;
-      this.props.market.currentFarmer.budget += 10
+      this.props.market.currentFarmer.budget += this.props.market.currentFarmer.myFarm.milk.total * 10
+      this.props.market.currentFarmer.myFarm.milk.total = 0;
     }
     if (item === "eggs" && this.props.market.currentFarmer.myFarm.eggs.total > 10) {
-      this.props.market.currentFarmer.myFarm.eggs.total -= 10;
-      this.props.market.currentFarmer.budget += 10
+      this.props.market.currentFarmer.budget += this.props.market.currentFarmer.myFarm.eggs.total * 10;
+      this.props.market.currentFarmer.myFarm.eggs.total = 0;
     }
     if (item === "wool" && this.props.market.currentFarmer.myFarm.wool.total > 10) {
-      this.props.market.currentFarmer.myFarm.wool.total -= 10;
-      this.props.market.currentFarmer.budget += 10
+      this.props.market.currentFarmer.budget += this.props.market.currentFarmer.myFarm.wool.total * 10
+      this.props.market.currentFarmer.myFarm.wool.total = 0;
     }
     if (item === "cow" && this.props.market.currentFarmer.myFarm.cows.total > 1) {
       this.props.market.currentFarmer.budget += 150

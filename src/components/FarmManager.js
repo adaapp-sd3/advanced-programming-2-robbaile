@@ -9,8 +9,7 @@ class FarmManager extends Component {
   render() {
     return (
       <div className="FarmManager">
-        <WeatherDashboard weather={this.props.weather} name={this.props.name} className="weather"/>
-
+        <WeatherDashboard weather={this.props.weather} name={this.props.name} level={this.props.level} className="weather"/>
         {this.props.farmer.showUI && (
           <FarmerDashboard farmer={this.props.farmer} className="farmer"/>
         )}

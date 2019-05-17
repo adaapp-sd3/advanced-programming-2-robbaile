@@ -5,6 +5,7 @@ h1 {
 .weatherDashboard {
     padding: 10px;
     margin-left: 10px;
+    margin-bottom: 10px;
     height: 100px;
     border-radius: 10px;
     box-shadow:  0 5px 15px rgba(0,0,0,0.08);

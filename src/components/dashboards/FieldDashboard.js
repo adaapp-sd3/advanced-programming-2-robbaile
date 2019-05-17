@@ -23,8 +23,8 @@ class FieldDashboard extends Component {
   }
 
   harvestCorn = () => {
-    for (var i=0; i<this.props.field.contents.length; i++) {
-      this.props.field.contents.pop();
+    for (var i=0; i < this.props.field.contents.length; i++) {
+      this.props.field.contents.shift();
       this.props.farmer.myFarm.corn.total += 1
     };
   }
@@ -57,6 +57,7 @@ class FieldDashboard extends Component {
                 ) : (
                 <p>Corn is currently growing</p>)}
               </div>
+              
             )}
           </div>
           
