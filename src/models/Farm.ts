@@ -30,7 +30,7 @@ class Farm extends Drawable {
     },
     chickens: any = {
       name: "Chickens",
-      total: 2,
+      total: 34,
       objects: []
     },
     straw: any = {
@@ -97,11 +97,11 @@ class Farm extends Drawable {
   }
 
   public buySheep() {
-    let cow = new Cow(this);
-    cow.p5 = this.p5;
-    cow.preload();
-    cow.setRandomPositionInField((window.innerWidth/2 - 300) + 25, 275, 350, 125);
-    this.cows.objects.push(cow);
+    let sheep = new Sheep(this);
+    sheep.p5 = this.p5;
+    sheep.preload();
+    sheep.setRandomPositionInField((window.innerWidth/2 - 300) + 25, 220, 350, 125);
+    this.sheep.objects.push(sheep);
   }
 
   private createBasicFarm = () => {

@@ -1,8 +1,5 @@
 import React, { Component } from "react";
-
 import './MarketDashboard.css';
-import Corn from "../../models/crops/Corn";
-
 
 class MarketDashboard extends Component {
 
@@ -20,11 +17,8 @@ class MarketDashboard extends Component {
 
   buyItem = item => {
     if (item === "seeds" && this.props.market.currentFarmer.budget > 0) {
-      this.props.market.currentFarmer.myFarm.seeds.total +=
-        this.props.market.currentFarmer.budget *
-        this.props.market.grassSeedPrice
-      console.log(this.props.market.currentFarmer.myFarm.seeds)
-      this.props.market.currentFarmer.budget = 0
+      this.props.market.currentFarmer.myFarm.seeds.total += 100
+      this.props.market.currentFarmer.budget -= 100 * this.props.market.grassSeedPrice
     }
     if (item === "cow" && this.props.market.currentFarmer.budget > 150) {
       if(this.props.market.currentFarmer.myFarm.fields[0].contents[0] && this.props.market.currentFarmer.myFarm.fields[0].contents[0].name === "Corn") {
@@ -52,8 +46,6 @@ class MarketDashboard extends Component {
         this.props.market.currentFarmer.budget -= 150
         this.props.market.currentFarmer.myFarm.sheep.total += 1;
       }
-      
-
     }
     if (item === "straw" && this.props.market.currentFarmer.budget > 99) {
       this.props.market.currentFarmer.myFarm.straw.total += 100;
